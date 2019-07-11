@@ -4,3 +4,9 @@ from django.shortcuts import render
 
 def home(request):
     return render(request, 'home.html')
+
+def hufspage(request):
+    return render(request, 'hufspage.html')
+
+def khpage(request):
+    return render(request, 'khpage.html')

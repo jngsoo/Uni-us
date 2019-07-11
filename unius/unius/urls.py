@@ -20,4 +20,6 @@ import mainapp.views
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', mainapp.views.home, name='home'),
+    path('hufspage/', mainapp.views.hufspage, name="hufspage"),
+    path('khpage/', mainapp.views.khpage, name="khpage"),
 ]

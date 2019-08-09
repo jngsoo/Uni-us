@@ -22,4 +22,10 @@ urlpatterns = [
     path('', mainapp.views.home, name='home'),
     path('hufspage/', mainapp.views.hufspage, name="hufspage"),
     path('khpage/', mainapp.views.khpage, name="khpage"),
+    path('hufs_recent/', mainapp.views.hufs_recent, name="hufs_recent"),
+    path('hufs_hot/', mainapp.views.hufs_hot, name="hufs_hot"),
+    path('hufs_battle/', mainapp.views.hufs_battle, name="hufs_battle"),
+    path('kh_recent/', mainapp.views.kh_recent, name="kh_recent"),
+    path('kh_hot/', mainapp.views.kh_hot, name="kh_hot"),
+    path('kh_battle/', mainapp.views.kh_battle, name="kh_battle"),
 ]

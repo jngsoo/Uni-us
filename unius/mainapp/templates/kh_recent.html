@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+                {% load staticfiles %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>KH: Recent Keyword</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="{% static 'css/khcss_detail.css' %}" type="text/css" rel="stylesheet">
+</head>
+<body>
+        <nav>
+                <div class="hidescroll">
+                    <a class="navitem" href="{% url 'home' %}"><i class="material-icons">home</i><span>Home</span></a>
+                    <a class="navitem" href="{% url 'kh_recent' %}"><i class="material-icons">touch_app</i><span>Recent Keyword</span></a>
+                    <a class="navitem" href="{% url 'kh_hot' %}"><i class="material-icons">trending_up</i><span>Hot Topic</span></a>
+                    <a class="navitem" href="{% url 'kh_battle' %}"><i class="material-icons">new_releases</i><span>Battlefield</span></a>
+                    <!--<span>Title</span>-->
+                      </div>
+        </nav>
+                
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+                {% load staticfiles %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>HUFS: Battlefield</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="{% static 'css/hufscss_detail.css' %}" type="text/css" rel="stylesheet">
+</head>
+<body>
+    <nav>
+            <div class="hidescroll">
+                    <a class="navitem" href="{% url 'home' %}"><i class="material-icons">home</i><span>Home</span></a>
+                    <a class="navitem" href="{% url 'hufs_recent' %}"><i class="material-icons">touch_app</i><span>Recent Keyword</span></a>
+                    <a class="navitem" href="{% url 'hufs_hot' %}"><i class="material-icons">trending_up</i><span>Hot Topic</span></a>
+                    <a class="navitem" href="{% url 'hufs_battle' %}"><i class="material-icons">new_releases</i><span>Battlefield</span></a>
+                    <!--<span>Title</span>-->
+                  </div>
+    </nav>
+</body>
+</html>

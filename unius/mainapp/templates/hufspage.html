@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>HUFS X UNI:US</title>
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link href="{% static 'css/hufscss.css' %}" type="text/css" rel="stylesheet">
 </head>
@@ -13,10 +13,10 @@
         <nav>
                 <div class="hidescroll">
                   <a class="navitem" href="{% url 'home' %}"><i class="material-icons">home</i><span>Home</span></a>
-                  <a class="navitem" href="#"><i class="material-icons">chrome_reader_mode</i><span>Articles</span></a>
-                  <a class="navitem" href="#"><i class="material-icons">folder</i><span>Projects</span></a>
-                  <a class="navitem" href="#"><i class="material-icons">book</i><span>Tutorials</span></a>
-                  <span>Title</span>
+                  <a class="navitem" href="{% url 'hufs_recent' %}"><i class="material-icons">touch_app</i><span>Recent Keyword</span></a>
+                  <a class="navitem" href="{% url 'hufs_hot' %}"><i class="material-icons">trending_up</i><span>Hot Topic</span></a>
+                  <a class="navitem" href="{% url 'hufs_battle' %}"><i class="material-icons">new_releases</i><span>Battlefield</span></a>
+                  <!--<span>Title</span>-->
                 </div>
         </nav>
                 

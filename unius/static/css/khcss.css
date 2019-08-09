@@ -76,3 +76,8 @@ body {
     margin-right: -100px;
     padding-right: 100px;
   }
+
+  #chart {
+    margin-left: 330px;
+    margin-top: 200px;
+  }

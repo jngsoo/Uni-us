@@ -10,3 +10,6 @@ def hufspage(request):
 
 def khpage(request):
     return render(request, 'khpage.html')
+
+def test(request):
+    return render(request, 'test.html')

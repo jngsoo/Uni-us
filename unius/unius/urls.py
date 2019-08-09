@@ -22,4 +22,6 @@ urlpatterns = [
     path('', mainapp.views.home, name='home'),
     path('hufspage/', mainapp.views.hufspage, name="hufspage"),
     path('khpage/', mainapp.views.khpage, name="khpage"),
+    path('test/', mainapp.views.test, name="test"),
+
 ]

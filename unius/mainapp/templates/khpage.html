@@ -8,6 +8,7 @@
     <title>Document</title>
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link href="{% static 'css/khcss.css' %}" type="text/css" rel="stylesheet">
+    <script src="https://code.highcharts.com/highcharts.src.js"></script>
 </head>
 <body>
         <nav>
@@ -16,9 +17,35 @@
                         <a class="navitem" href="#"><i class="material-icons">chrome_reader_mode</i><span>Articles</span></a>
                         <a class="navitem" href="#"><i class="material-icons">folder</i><span>Projects</span></a>
                         <a class="navitem" href="#"><i class="material-icons">book</i><span>Tutorials</span></a>
-                        <span>Title</span>
+                        <!-- <span>Title</span> -->
                 </div>
         </nav>
+
+        <div id="chart"></div>
+        <script>
+                        Highcharts.chart('chart', {
+                            chart: {
+                                type: 'column'
+                            },
+                            title: {
+                                text: 'Historic World Population by Region'
+                            },
+                            xAxis: {
+                                categories: ['Africa', 'America', 'Asia', 'Europe', 'Oceania']
+                            },
+                            series: [{
+                                name: 'Year 1800',
+                                data: [107, 31, 635, 203, 2]
+                            }, {
+                                name: 'Year 1900',
+                                data: [133, 156, 947, 408, 6]
+                            }, {
+                                name: 'Year 2012',
+                                data: [1052, 954, 4250, 740, 38]
+                            }]
+                        });
+                      </script>
+
                 
 </body>
 </html>

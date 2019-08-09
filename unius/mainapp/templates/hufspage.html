@@ -1,24 +1,80 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-                {% load staticfiles %}
+{% load staticfiles %}
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <link href="{% static 'css/hufscss.css' %}" type="text/css" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link href="{% static 'css/hufscss2.css' %}" type="text/css" rel="stylesheet">
+    <!-- Chart 용 -->
+    <script src="https://code.highcharts.com/highcharts.src.js"></script>
+    <!-- WordCloud용 -->
+    <script src="https://code.highcharts.com/modules/wordcloud.js"></script>
 </head>
 <body>
+        <div class="mybody">
+                <nav class="sidenav">
+                        <div class="hidescroll">
+                        <a class="navitem" href="{% url 'home' %}"><i class="material-icons">home</i><span>Home</span></a>
+                        <a class="navitem" href="#"><i class="material-icons">chrome_reader_mode</i><span>About</span></a>
+                        <a class="navitem" href="#"><i class="material-icons">folder</i><span>Login</span></a>
+                        </div>
+                </nav>
+        </div>
+
+        <!-- 그래프 네비게이터 -->
         <nav>
-                <div class="hidescroll">
-                  <a class="navitem" href="{% url 'home' %}"><i class="material-icons">home</i><span>Home</span></a>
-                  <a class="navitem" href="#"><i class="material-icons">chrome_reader_mode</i><span>Articles</span></a>
-                  <a class="navitem" href="#"><i class="material-icons">folder</i><span>Projects</span></a>
-                  <a class="navitem" href="#"><i class="material-icons">book</i><span>Tutorials</span></a>
-                  <span>Title</span>
+                <div class="nav nav-tabs" id="nav-tab" role="tablist" style="margin-left: 180px">
+                        <a class="nav-item nav-link active" id="nav-home-tab" data-toggle="tab" href="#aug_5" role="tab" aria-controls="nav-home" aria-selected="true">8월 5일</a>
+                        <a class="nav-item nav-link" id="nav-profile-tab" data-toggle="tab" href="#aug_4" role="tab" aria-controls="nav-profile" aria-selected="false">8월 4일</a>
+                         <a class="nav-item nav-link" id="nav-contact-tab" data-toggle="tab" href="#aug_3" role="tab" aria-controls="nav-contact" aria-selected="false">8월 3일</a>
+                        <a class="nav-item nav-link" id="nav-home-tab" data-toggle="tab" href="#aug_2" role="tab" aria-controls="nav-home" aria-selected="false">8월 2일</a>
+                        <a class="nav-item nav-link" id="nav-profile-tab" data-toggle="tab" href="#aug_1" role="tab" aria-controls="nav-profile" aria-selected="false">8월 1일</a>
+
                 </div>
         </nav>
-                
+        
+
+        <!-- 각각의 그래프 -->
+        <div class="tab-content" id="nav-tabContent">
+                <div class="tab-pane fade show active" id="aug_5" role="tabpanel" aria-labelledby="nav-home-tab">
+                        <div class="chart" id="barChart_0805"></div>
+                        <div class="chart" id="wordcloud_0805"></div>
+                </div>
+                <div class="tab-pane fade" id="aug_4" role="tabpanel" aria-labelledby="nav-profile-tab">
+                        <div class="chart" id="barChart_0804"></div>
+                        <div class="chart" id="wordcloud_0804"></div>
+                </div>
+                <div class="tab-pane fade" id="aug_3" role="tabpanel" aria-labelledby="nav-contact-tab">
+                        <div class="chart" id="barChart_0803"></div>
+                        <div class="chart" id="wordcloud_0803"></div>
+                </div>
+                <div class="tab-pane fade" id="aug_2" role="tabpanel" aria-labelledby="nav-contact-tab">
+                        <div class="chart" id="barChart_0802"></div>
+                        <div class="chart" id="wordcloud_0802"></div>
+                </div>
+                <div class="tab-pane fade" id="aug_1" role="tabpanel" aria-labelledby="nav-contact-tab">
+                        <div class="chart" id="barChart_0801"></div>
+                        <div class="chart" id="wordcloud_0801"></div>
+                </div>
+        </div>
+        
+        <script src="{% static 'js/barChart_0805.js' %}"></script>
+        <script src="{% static 'js/wordcloud_0805.js' %}"></script>
+        <script src="{% static 'js/barChart_0804.js' %}"></script>
+        <script src="{% static 'js/wordcloud_0804.js' %}"></script>
+        <script src="{% static 'js/barChart_0803.js' %}"></script>
+        <script src="{% static 'js/wordcloud_0803.js' %}"></script>
+        <script src="{% static 'js/barChart_0802.js' %}"></script>
+        <script src="{% static 'js/wordcloud_0802.js' %}"></script>
+        <script src="{% static 'js/barChart_0801.js' %}"></script>
+        <script src="{% static 'js/wordcloud_0801.js' %}"></script>
+
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 </body>
 </html>

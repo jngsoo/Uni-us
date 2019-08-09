@@ -1,0 +1,10 @@
+Highcharts.chart('wordcloud_0805', {
+    series: [{
+        type: 'wordcloud',
+        data: [{'name': '경제', 'weight': 247} , {'name': '수강신청', 'weight': 226} , {'name': '일본', 'weight': 223} , {'name': '나라', 'weight': 204} , {'name': '문재인', 'weight': 145} , {'name': '경영', 'weight': 138} , {'name': '정치', 'weight': 125} , {'name': '문재앙', 'weight': 103} , {'name': '이중', 'weight': 102} , {'name': '학점', 'weight': 91} , {'name': '북한', 'weight': 71} , {'name': '정부', 'weight': 71} , {'name': '대통령', 'weight': 64} , {'name': '미국', 'weight': 58} , {'name': '휴학', 'weight': 56} , {'name': '재수강', 'weight': 54} , {'name': '교양', 'weight': 54} , {'name': '졸업', 'weight': 50} , {'name': '보수', 'weight': 48} , {'name': '강사', 'weight': 45} , {'name': '증원', 'weight': 45} , {'name': '대깨문', 'weight': 45} , {'name': '취업', 'weight': 43} , {'name': '알바', 'weight': 41} , {'name': '쪽지', 'weight': 39} , {'name': '안보', 'weight': 38} , {'name': '선동', 'weight': 37} , {'name': '역사', 'weight': 34} , {'name': '증시', 'weight': 34} , {'name': '코스피', 'weight': 33} , {'name': '에타', 'weight': 31} , {'name': '이중전공', 'weight': 31} , {'name': '여성', 'weight': 30} , {'name': '외교', 'weight': 30} , {'name': '정권', 'weight': 29} , {'name': '시간표', 'weight': 28} , {'name': '박근혜', 'weight': 28} , {'name': '달라', 'weight': 28} , {'name': '개돼지', 'weight': 27} , {'name': '부전공', 'weight': 26} , {'name': '연애', 'weight': 25} , {'name': '진보', 'weight': 25} , {'name': '인턴', 'weight': 24} , {'name': '발표', 'weight': 23} , {'name': '주식', 'weight': 23} , {'name': '평화', 'weight': 23} , {'name': '팀플', 'weight': 22} , {'name': '자본', 'weight': 22} , {'name': '반일', 'weight': 22} , {'name': '재앙', 'weight': 21} , {'name': '정시', 'weight': 21} , {'name': '국통', 'weight': 21} , {'name': '정정기간', 'weight': 21} , {'name': '불매운동', 'weight': 20} , {'name': '환율', 'weight': 20} , {'name': '빨갱이', 'weight': 19} , {'name': '시국', 'weight': 19}],
+        name: 'Occurrences'
+    }],
+    title: {
+        text: 'Word Cloud'
+    }
+});
